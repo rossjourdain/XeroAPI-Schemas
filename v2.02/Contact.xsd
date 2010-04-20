@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Contact"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:include schemaLocation="BaseTypes.xsd" />
+  <xs:include schemaLocation="Address.xsd" />
+    
+  <xs:element name="Contacts" nillable="true" type="ArrayOfContact" />
+  
+  <xs:complexType name="ArrayOfContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contact" nillable="true" type="Contact" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="Contact">
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:choice maxOccurs="unbounded">
+          <xs:element minOccurs="1" maxOccurs="1" name="ContactID" type="uniqueIdentifier" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ContactNumber" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ContactStatus" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FirstName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LastName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="SkypeUserName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BankAccountDetails" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="TaxNumber" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AccountsReceivableTaxType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AccountsPayableTaxType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Addresses" type="ArrayOfAddress" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Phones" type="ArrayOfPhone" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UpdatedDateUTC" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ContactGroups" type="ArrayOfContactGroup" />
+          <xs:element minOccurs="0" maxOccurs="1" name="IsSupplier" nillable="false" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="IsCustomer" nillable="false" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="DefaultCurrency" type="xs:string" />
+        </xs:choice>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="ArrayOfContactGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactGroup" nillable="true" type="ContactGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="ContactGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="Phone">
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="PhoneType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PhoneAreaCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PhoneCountryCode" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="ArrayOfPhone">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Phone" nillable="true" type="Phone" />
+    </xs:sequence>
+  </xs:complexType>
+    
+</xs:schema>

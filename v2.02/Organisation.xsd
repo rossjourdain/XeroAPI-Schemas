@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Organisation"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:include schemaLocation="BaseTypes.xsd" />
+  <xs:include schemaLocation="CurrencyCode.xsd" />
+
+  <xs:element name="Organisations" nillable="true" type="ArrayOfOrganisation" />
+
+  <xs:complexType name="ArrayOfOrganisation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Organisation" nillable="true" type="Organisation" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="Organisation">
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="APIKey" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Country" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="LegalName" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="PaysTax" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Version" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="OrganisationType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BaseCurrency" type="currencyCode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+   
+</xs:schema>

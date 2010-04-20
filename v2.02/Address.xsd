@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Address"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:include schemaLocation="BaseTypes.xsd" />
+  
+  <xs:complexType name="Address">
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:choice maxOccurs="unbounded">
+          <xs:element minOccurs="0" maxOccurs="1" name="AddressType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AddressLine1" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AddressLine3" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AddressLine4" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="City" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Region" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PostalCode" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Country" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="AttentionTo" type="xs:string" />
+        </xs:choice>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="ArrayOfAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="Address" />
+    </xs:sequence>
+  </xs:complexType>
+    
+</xs:schema>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Tracking"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:include schemaLocation="BaseTypes.xsd" />
+
+  <xs:element name="TrackingCategories" type="ArrayOfTrackingCategory" />
+  
+  <xs:complexType name="TrackingCategory">
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="TrackingCategoryID" type="uniqueIdentifier" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:choice>
+            <!-- This is shown in the TrackingCategories endpoint -->
+            <xs:element minOccurs="0" maxOccurs="1" name="Option" type="xs:string" />
+            <!-- This is shown when a tracking category is embeded in an Invoice/CreditNote/etc -->
+            <xs:element minOccurs="0" maxOccurs="1" name="Options" type="ArrayOfTrackingCategoryOption" />
+          </xs:choice>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="TrackingCategoryOption">
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="ArrayOfTrackingCategoryOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Option" nillable="true" type="TrackingCategoryOption" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="ArrayOfTrackingCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrackingCategory" nillable="true" type="TrackingCategory" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  targetNamespace="http://xero.com/api/2.02/schema"
+  xmlns="http://xero.com/api/2.02/schema"
+-->
+<xs:schema id="BaseTypes"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:include schemaLocation="BaseTypes.xsd" />
+  <xs:include schemaLocation="Account.xsd" />
+  <xs:include schemaLocation="Payment.xsd" />
+  <xs:include schemaLocation="Contact.xsd" />
+  <xs:include schemaLocation="Tracking.xsd" />
+  <xs:include schemaLocation="CurrencyCode.xsd" />
+  <xs:include schemaLocation="Organisation.xsd" />
+  <xs:include schemaLocation="TaxRate.xsd" />
+  <xs:include schemaLocation="Currency.xsd" />
+  <xs:include schemaLocation="CreditNote.xsd" />
+
+  <xs:element name="Response" type="Response" />
+  
+  <xs:complexType name="Response">
+    <xs:sequence>
+      
+      <!-- Header -->
+      <xs:element minOccurs="1" maxOccurs="1" name="Id" type="uniqueIdentifier" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Status" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ProviderName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DateTimeUTC" type="xs:dateTime" />
+      
+      <!-- Items -->
+      <xs:element minOccurs="0" maxOccurs="1" name="Invoices" type="ArrayOfInvoice" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Contacts" type="ArrayOfContact" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TaxRates" type="ArrayOfTaxRate" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Accounts" type="ArrayOfAccount" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TrackingCategories" type="ArrayOfTrackingCategory" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Organisations" type="ArrayOfOrganisation" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CreditNotes" type="ArrayOfCreditNote" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Currencies" type="ArrayOfCurrency" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Payments" type="ArrayOfPayment" />
+      
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>
