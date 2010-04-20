@@ -7,8 +7,10 @@
   <!--
   Simple Types
   -->
+  
+  <!-- uniqueIdentifier -->
   <xs:simpleType name="uniqueIdentifier">
-    <xs:restriction base="xs:string">
+    <xs:restriction base="xs:token">
       <xs:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
     </xs:restriction>
   </xs:simpleType>
@@ -36,6 +38,9 @@
     </xs:restriction>
   </xs:simpleType>
   
+  <!--
+  Complex types
+  -->
   <xs:complexType name="DataContractBase" abstract="true">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="1" name="ValidationErrors" type="ArrayOfValidationError" />
@@ -67,6 +72,10 @@
     </xs:sequence>
   </xs:complexType>
 
+  <!--
+  Enumerator Types  
+  -->
+  
   <!-- Line Amount Type -->
   <xs:simpleType name="lineAmountType">
     <xs:list>
@@ -109,7 +118,7 @@
   <!-- Invoice Status -->
   <xs:simpleType name="invoiceStatus">
     <xs:annotation><xs:documentation>Invoice Status</xs:documentation></xs:annotation>
-    <xs:restriction base="xs:NMTOKEN">
+    <xs:restriction base="xs:token">
       <xs:enumeration value="DRAFT"><xs:annotation><xs:documentation>Draft</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="SUBMITTED"><xs:annotation><xs:documentation>Submitted</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="DELETED"><xs:annotation><xs:documentation>Deleted</xs:documentation></xs:annotation></xs:enumeration>
@@ -122,7 +131,7 @@
   <!-- Account Type "ACCTTYPE/??" -->
   <xs:simpleType name="accountType">
     <xs:annotation><xs:documentation>Account Type</xs:documentation></xs:annotation>
-    <xs:restriction base="xs:NMTOKEN">
+    <xs:restriction base="xs:token">
       <xs:enumeration value="BANK"><xs:annotation><xs:documentation>Bank</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="CURRENT"><xs:annotation><xs:documentation>Current Assets</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="CURRLIAB"><xs:annotation><xs:documentation>Current Liabilities</xs:documentation></xs:annotation></xs:enumeration>
@@ -145,7 +154,7 @@
   <!-- System Account "SYSACCT/???"  -->
   <xs:simpleType name="accountSystemCode">
     <xs:annotation><xs:documentation>Account System Code</xs:documentation></xs:annotation>
-    <xs:restriction base="xs:NMTOKEN">
+    <xs:restriction base="xs:token">
 	  <xs:enumeration value="ROUNDING"><xs:annotation><xs:documentation>Rounding</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="GST"><xs:annotation><xs:documentation> GST</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="GSTONIMPORTS"><xs:annotation><xs:documentation>GST On Imports</xs:documentation></xs:annotation></xs:enumeration>
@@ -164,7 +173,7 @@
   <!-- Account Status "ACCTSTATUS/???" -->
   <xs:simpleType name="accountStatus">
     <xs:annotation><xs:documentation>Account Status</xs:documentation></xs:annotation>
-    <xs:restriction base="xs:NMTOKEN">
+    <xs:restriction base="xs:token">
       <xs:enumeration value="ACTIVE"><xs:annotation><xs:documentation>Active</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="ARCHIVED"><xs:annotation><xs:documentation>Archived</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="DELETED"><xs:annotation><xs:documentation>Deleted</xs:documentation></xs:annotation></xs:enumeration>
@@ -175,7 +184,7 @@
   <!-- Account Code -->
   <xs:simpleType name="accountCode">
     <xs:annotation><xs:documentation>Account Code</xs:documentation></xs:annotation>
-    <xs:restriction base="xs:string">
+    <xs:restriction base="xs:token">
       <xs:maxLength value="10" />
     </xs:restriction>
   </xs:simpleType>
@@ -185,7 +194,7 @@
     <xs:annotation>
       <xs:documentation>Bank Account Number</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="xs:string">
+    <xs:restriction base="xs:token">
       <xs:maxLength value="20" />
     </xs:restriction>
   </xs:simpleType>
@@ -194,7 +203,7 @@
     <xs:annotation>
       <xs:documentation>Invoice Type</xs:documentation>
     </xs:annotation>
-    <xs:restriction base="xs:string">
+    <xs:restriction base="xs:token">
       <xs:enumeration value="ACCPAY"><xs:annotation><xs:documentation>Accounts Payable</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="ACCREC"><xs:annotation><xs:documentation>Accounts Receivable</xs:documentation></xs:annotation></xs:enumeration>
     </xs:restriction>
