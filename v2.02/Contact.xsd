@@ -17,7 +17,7 @@
   <xs:complexType name="Contact">
     <xs:complexContent mixed="false">
       <xs:extension base="DataContractBase">
-        <xs:choice maxOccurs="unbounded">
+        <xs:sequence>
           <xs:element minOccurs="1" maxOccurs="1" name="ContactID" type="uniqueIdentifier" />
           <xs:element minOccurs="0" maxOccurs="1" name="ContactNumber" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="ContactStatus" type="xs:string" />
@@ -37,7 +37,7 @@
           <xs:element minOccurs="0" maxOccurs="1" name="IsSupplier" nillable="false" type="xs:boolean" />
           <xs:element minOccurs="0" maxOccurs="1" name="IsCustomer" nillable="false" type="xs:boolean" />
           <xs:element minOccurs="0" maxOccurs="1" name="DefaultCurrency" type="xs:string" />
-        </xs:choice>
+        </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

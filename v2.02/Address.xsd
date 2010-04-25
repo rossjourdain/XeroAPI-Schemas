@@ -8,7 +8,7 @@
   <xs:complexType name="Address">
     <xs:complexContent mixed="false">
       <xs:extension base="DataContractBase">
-        <xs:choice maxOccurs="unbounded">
+        <xs:sequence>
           <xs:element minOccurs="0" maxOccurs="1" name="AddressType" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="AddressLine1" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="xs:string" />
@@ -19,7 +19,7 @@
           <xs:element minOccurs="0" maxOccurs="1" name="PostalCode" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="Country" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="AttentionTo" type="xs:string" />
-        </xs:choice>
+        </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

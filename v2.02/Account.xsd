@@ -16,7 +16,7 @@
   <xs:complexType name="Account">
     <xs:complexContent mixed="false">
       <xs:extension base="DataContractBase">
-        <xs:choice maxOccurs="unbounded">
+        <xs:sequence>
           <xs:element minOccurs="1" maxOccurs="1" name="AccountID" type="uniqueIdentifier" />
           <xs:element minOccurs="0" maxOccurs="1" name="Code" type="accountCode" />
           <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
@@ -26,7 +26,7 @@
           <xs:element minOccurs="0" maxOccurs="1" name="SystemAccount" type="accountSystemCode" />
           <xs:element minOccurs="1" maxOccurs="1" name="EnablePaymentsToAccount" type="xs:boolean" />
           <xs:element minOccurs="0" maxOccurs="1" name="BankAccountNumber" type="bankAccountNumber" />
-        </xs:choice>
+        </xs:sequence>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>

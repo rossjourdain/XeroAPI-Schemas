@@ -17,6 +17,7 @@
   <xs:include schemaLocation="TaxRate.xsd" />
   <xs:include schemaLocation="Currency.xsd" />
   <xs:include schemaLocation="CreditNote.xsd" />
+  <xs:include schemaLocation="DocumentBase.xsd" />
 
   <xs:element name="Response" type="Response" />
   

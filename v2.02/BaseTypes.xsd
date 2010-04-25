@@ -32,7 +32,7 @@
 
   <!-- tax rates to 4dp -->
   <xs:simpleType name="taxRate">
-    <xs:restriction base="xs:decimal">
+    <xs:restriction base=" xs:decimal">
       <xs:minInclusive value="0" />
       <xs:fractionDigits value="4" />
     </xs:restriction>
@@ -124,7 +124,7 @@
       <xs:pattern value="TAX[0-9][0-9][0-9]"></xs:pattern>
     </xs:restriction>
   </xs:simpleType>
-
+  
   <!-- Invoice Status -->
   <xs:simpleType name="invoiceStatus">
     <xs:annotation><xs:documentation>Invoice Status</xs:documentation></xs:annotation>
@@ -138,7 +138,7 @@
     </xs:restriction>
   </xs:simpleType>
   
-  <!-- Account Type "ACCTTYPE/??" -->
+  <!-- Account Type -->
   <xs:simpleType name="accountType">
     <xs:annotation><xs:documentation>Account Type</xs:documentation></xs:annotation>
     <xs:restriction base="xs:token">
@@ -161,7 +161,7 @@
     </xs:restriction>
   </xs:simpleType>
   
-  <!-- System Account "SYSACCT/???"  -->
+  <!-- System Account Code -->
   <xs:simpleType name="accountSystemCode">
     <xs:annotation><xs:documentation>Account System Code</xs:documentation></xs:annotation>
     <xs:restriction base="xs:token">
@@ -180,7 +180,7 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <!-- Account Status "ACCTSTATUS/???" -->
+  <!-- Account Status -->
   <xs:simpleType name="accountStatus">
     <xs:annotation><xs:documentation>Account Status</xs:documentation></xs:annotation>
     <xs:restriction base="xs:token">
@@ -209,6 +209,7 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <!-- Invoice Types for 'Invoice' endpoint -->
   <xs:simpleType name="invoiceType">
     <xs:annotation>
       <xs:documentation>Invoice Type</xs:documentation>
