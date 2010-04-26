@@ -11,12 +11,16 @@
     <xs:complexContent mixed="false">
       <xs:extension base="DataContractBase">
         <xs:sequence>
+          
           <xs:element minOccurs="1" maxOccurs="1" name="TrackingCategoryID" type="uniqueIdentifier" />
           <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:string" />
+          
           <!-- This is shown in the TrackingCategories endpoint -->
           <xs:element minOccurs="0" maxOccurs="1" name="Option" type="xs:string" />
+          
           <!-- This is shown when a tracking category is embeded in an Invoice/CreditNote/etc -->
           <xs:element minOccurs="0" maxOccurs="1" name="Options" type="ArrayOfTrackingCategoryOption" />
+          
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
