@@ -29,6 +29,9 @@
           <xs:element minOccurs="0" maxOccurs="1" name="AmountDue" nillable="true" type="itemPrice" />
           <xs:element minOccurs="0" maxOccurs="1" name="AmountPaid" nillable="true" type="itemPrice" />
           <xs:element minOccurs="0" maxOccurs="1" name="AmountCredited" nillable="true" type="itemPrice" />
+          <xs:element minOccurs="0" maxOccurs="1" name="BrandingThemeID" type="uniqueIdentifier" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ExternalLinkProviderName" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
