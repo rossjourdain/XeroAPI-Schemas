@@ -18,6 +18,7 @@
   <xs:include schemaLocation="Currency.xsd" />
   <xs:include schemaLocation="CreditNote.xsd" />
   <xs:include schemaLocation="DocumentBase.xsd" />
+  <xs:include schemaLocation="Journal.xsd" />
 
   <xs:element name="Response" type="Response" />
   
@@ -40,6 +41,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="CreditNotes" type="ArrayOfCreditNote" />
       <xs:element minOccurs="0" maxOccurs="1" name="Currencies" type="ArrayOfCurrency" />
       <xs:element minOccurs="0" maxOccurs="1" name="Payments" type="ArrayOfPayment" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Journals" type="ArrayOfJournal" />
       
     </xs:sequence>
   </xs:complexType>
