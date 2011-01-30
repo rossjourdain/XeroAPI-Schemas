@@ -72,6 +72,9 @@
     </None>
     <None Include="Journal.xsd" />
     <None Include="LineItem.xsd" />
+    <None Include="ManualJournal.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Organisation.xsd" />
     <None Include="Payment.xsd" />
     <None Include="Response.xsd" />

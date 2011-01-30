@@ -45,6 +45,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Journals" type="ArrayOfJournal" />
       <xs:element minOccurs="0" maxOccurs="1" name="BrandingThemes" type="ArrayOfBrandingTheme" />
       <xs:element minOccurs="0" maxOccurs="1" name="Items" type="ArrayOfItem" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ManualJournals" type="ArrayOfManualJournal" />
       
     </xs:sequence>
   </xs:complexType>

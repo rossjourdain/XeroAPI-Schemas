@@ -15,22 +15,30 @@
   </xs:complexType>
 
   <xs:complexType name="Item">
-    <xs:sequence>
-      <xs:element name="ItemID" type="uniqueIdentifier" minOccurs="0" maxOccurs="1" />
-      <xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1" />
-      <xs:element name="Code" type="xs:string" minOccurs="0" maxOccurs="1" />
-      <xs:element name="UpdatedDateUTC" type="xs:date" minOccurs="0" maxOccurs="1" />
-      <xs:element name="SalesDetails" type="ItemPriceDetails" minOccurs="1" maxOccurs="1" />
-      <xs:element name="PurchaseDetails" type="ItemPriceDetails" minOccurs="1" maxOccurs="1" />
-    </xs:sequence>
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:sequence>
+          <xs:element name="ItemID" type="uniqueIdentifier" minOccurs="0" maxOccurs="1" />
+          <xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1" />
+          <xs:element name="Code" type="xs:string" minOccurs="0" maxOccurs="1" />
+          <xs:element name="UpdatedDateUTC" type="xs:date" minOccurs="0" maxOccurs="1" />
+          <xs:element name="SalesDetails" type="ItemPriceDetails" minOccurs="1" maxOccurs="1" />
+          <xs:element name="PurchaseDetails" type="ItemPriceDetails" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
 
   <xs:complexType name="ItemPriceDetails">
-    <xs:sequence>
-      <xs:element name="UnitPrice" type="itemPrice" minOccurs="0" maxOccurs="1" />
-      <xs:element name="TaxType" type="taxType" minOccurs="0" maxOccurs="1" />
-      <xs:element name="AccountCode" type="accountCode" minOccurs="0" maxOccurs="1" />
-    </xs:sequence>
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:sequence>
+          <xs:element name="UnitPrice" type="itemPrice" minOccurs="0" maxOccurs="1" />
+          <xs:element name="TaxType" type="taxType" minOccurs="0" maxOccurs="1" />
+          <xs:element name="AccountCode" type="accountCode" minOccurs="0" maxOccurs="1" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   
 </xs:schema>
