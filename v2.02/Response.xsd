@@ -20,6 +20,7 @@
   <xs:include schemaLocation="Journal.xsd" />
   <xs:include schemaLocation="BrandingTheme.xsd" />
   <xs:include schemaLocation="Items.xsd" />
+  <xs:include schemaLocation="ManualJournal.xsd" />
 
   <xs:element name="Response" type="ResponseType" />
   
