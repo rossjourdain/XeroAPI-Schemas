@@ -17,7 +17,6 @@
   <xs:include schemaLocation="TaxRate.xsd" />
   <xs:include schemaLocation="Currency.xsd" />
   <xs:include schemaLocation="CreditNote.xsd" />
-  <xs:include schemaLocation="DocumentBase.xsd" />
   <xs:include schemaLocation="Journal.xsd" />
   <xs:include schemaLocation="BrandingTheme.xsd" />
   <xs:include schemaLocation="Items.xsd" />
