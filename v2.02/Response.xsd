@@ -20,10 +20,11 @@
   <xs:include schemaLocation="DocumentBase.xsd" />
   <xs:include schemaLocation="Journal.xsd" />
   <xs:include schemaLocation="BrandingTheme.xsd" />
+  <xs:include schemaLocation="Items.xsd" />
 
-  <xs:element name="Response" type="Response" />
+  <xs:element name="Response" type="ResponseType" />
   
-  <xs:complexType name="Response">
+  <xs:complexType name="ResponseType">
     <xs:sequence>
       
       <!-- Header -->
@@ -44,6 +45,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Payments" type="ArrayOfPayment" />
       <xs:element minOccurs="0" maxOccurs="1" name="Journals" type="ArrayOfJournal" />
       <xs:element minOccurs="0" maxOccurs="1" name="BrandingThemes" type="ArrayOfBrandingTheme" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Items" type="ArrayOfItem" />
       
     </xs:sequence>
   </xs:complexType>
