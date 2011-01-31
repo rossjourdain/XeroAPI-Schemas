@@ -26,6 +26,7 @@
           <xs:element minOccurs="0" maxOccurs="1" name="UpdatedDateUTC" type="xs:date" />
           <xs:element minOccurs="0" maxOccurs="1" name="ManualJournalID" type="uniqueIdentifier" />
           <xs:element minOccurs="0" maxOccurs="1" name="Narration" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="JournalLines" type="ArrayOfManualJournalLine" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
