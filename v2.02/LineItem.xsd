@@ -24,6 +24,7 @@
           <xs:element minOccurs="1" maxOccurs="1" name="LineAmount" nillable="true" type="itemPrice" />
           <xs:element minOccurs="0" maxOccurs="1" name="AccountCode" type="accountCode" />
           <xs:element minOccurs="0" maxOccurs="1" name="Tracking" type="ArrayOfTrackingCategory" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ItemCode" type="xs:string" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
