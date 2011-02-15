@@ -28,8 +28,17 @@
 
  The Xero API Schemas is provided under the MIT license as described 
  above.
+ 
+ PLEASE NOTE: No warranty is given to the accuracy of the schema 
+ files. The Xero API team reserve the right to introduce new elements 
+ to the API request and response messages without warning.
 
- Use of Xero services is bound by the Xero Terms and Conditions,
+ The schemas are provided for reference purposes for generating
+ client-side object models. Considering that the schema files may
+ not always match the response from the API, we reccommend that you
+ do NOT validate response xml messages using the xml schemas.
+ 
+ The use of Xero API is bound by the Xero Terms and Conditions,
  see http://www.xero.com/terms/ for more information.
 
  -----------------------------------------------------------------
