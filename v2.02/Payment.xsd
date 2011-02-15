@@ -15,6 +15,7 @@
           <xs:element minOccurs="1" maxOccurs="1" name="Date" type="xs:dateTime" />
           <xs:element minOccurs="1" maxOccurs="1" name="Amount" type="xs:decimal" />
           <xs:element minOccurs="0" maxOccurs="1" name="Account" type="Account" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Reference" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="Invoice" type="Invoice" />
           <xs:element minOccurs="1" maxOccurs="1" name="PaymentID" nillable="true" type="uniqueIdentifier" />
         </xs:sequence>
