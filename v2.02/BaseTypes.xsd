@@ -32,7 +32,7 @@
 
   <!-- tax rates to 4dp -->
   <xs:simpleType name="taxRate">
-    <xs:restriction base=" xs:decimal">
+    <xs:restriction base="xs:decimal">
       <xs:minInclusive value="0" />
       <xs:fractionDigits value="4" />
     </xs:restriction>
@@ -40,7 +40,7 @@
 
   <!-- currency rates to 6dp -->
   <xs:simpleType name="currencyRate">
-    <xs:restriction base=" xs:decimal">
+    <xs:restriction base="xs:decimal">
       <xs:minInclusive value="0" />
       <xs:fractionDigits value="6" />
     </xs:restriction>
@@ -173,7 +173,7 @@
   <xs:simpleType name="accountSystemCode">
     <xs:annotation><xs:documentation>Account System Code</xs:documentation></xs:annotation>
     <xs:restriction base="xs:token">
-	  <xs:enumeration value="ROUNDING"><xs:annotation><xs:documentation>Rounding</xs:documentation></xs:annotation></xs:enumeration>
+	    <xs:enumeration value="ROUNDING"><xs:annotation><xs:documentation>Rounding</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="GST"><xs:annotation><xs:documentation> GST</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="GSTONIMPORTS"><xs:annotation><xs:documentation>GST On Imports</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="CREDITORS"><xs:annotation><xs:documentation>Creditors</xs:documentation></xs:annotation></xs:enumeration>
