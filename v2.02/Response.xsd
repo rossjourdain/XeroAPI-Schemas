@@ -21,6 +21,7 @@
   <xs:include schemaLocation="BrandingTheme.xsd" />
   <xs:include schemaLocation="Items.xsd" />
   <xs:include schemaLocation="ManualJournal.xsd" />
+  <xs:include schemaLocation="Report.xsd" />
 
   <xs:element name="Response" type="ResponseType" />
   
@@ -47,6 +48,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="BrandingThemes" type="ArrayOfBrandingTheme" />
       <xs:element minOccurs="0" maxOccurs="1" name="Items" type="ArrayOfItem" />
       <xs:element minOccurs="0" maxOccurs="1" name="ManualJournals" type="ArrayOfManualJournal" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Reports" type="ArrayOfReport" />
       
     </xs:sequence>
   </xs:complexType>
