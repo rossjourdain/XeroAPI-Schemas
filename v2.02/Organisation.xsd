@@ -26,6 +26,26 @@
           <xs:element minOccurs="0" maxOccurs="1" name="Version" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="OrganisationType" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="BaseCurrency" type="currencyCode" />
+          
+          <!-- Added for v2.06 -->
+          <xs:element minOccurs="0" maxOccurs="1" name="CountryCode" type="currencyCode" />
+          <xs:element minOccurs="0" maxOccurs="1" name="IsDemoCompany" type="currencyCode" />
+          <xs:element minOccurs="0" maxOccurs="1" name="OrganisationStatus" type="organisationStatusCode" />
+          <!--
+          CountryCode = organisationSource.CountryCode.Replace("CNTRY/", string.Empty),
+          IsDemoCompany = (organisationSource.OrganisationTypeCode == Codes.OrganisationType.Demo),
+          OrganisationStatus = organisationSource.OrganisationStatusCode.Replace("ORGSTATUS/", string.Empty),          
+          -->
+          
+          
+          <!-- Added for v2.08 -->
+          <xs:element minOccurs="0" maxOccurs="1" name="TaxNumber" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FinancialYearEndDay" type="currencyCode" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FinancialYearEndMonth" type="currencyCode" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PeriodLockDate" type="xs:date" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EndOfYearLockDate" type="xs:date" />
+
+          
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

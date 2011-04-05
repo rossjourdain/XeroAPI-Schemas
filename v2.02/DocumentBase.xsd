@@ -3,6 +3,7 @@
     elementFormDefault="qualified"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
 >
+  <!--
   <xs:include schemaLocation="BaseTypes.xsd" />
   <xs:include schemaLocation="Account.xsd" />
   <xs:include schemaLocation="Payment.xsd" />
@@ -32,5 +33,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  -->
   
 </xs:schema>
