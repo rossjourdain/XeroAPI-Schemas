@@ -247,5 +247,14 @@
       <xs:enumeration value="SINGLE"><xs:annotation><xs:documentation>Single Use Rate</xs:documentation></xs:annotation></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
+
+  <!-- Organisation Status Code-->
+  <xs:simpleType name="organisationStatusCode">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="ACTIVE"></xs:enumeration>
+      <xs:enumeration value="SUSPENDED"></xs:enumeration>
+      <xs:enumeration value="DELETED"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
   
 </xs:schema>
