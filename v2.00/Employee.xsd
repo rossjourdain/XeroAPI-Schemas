@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Employee"
+    elementFormDefault="qualified"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+  <xs:include schemaLocation="BaseTypes.xsd" />
+
+  <xs:element name="Employees" type="ArrayOfEmployee" />
+
+  <!-- 
+  ArrayOfEmployee 
+  -->
+  <xs:complexType name="ArrayOfEmployee">
+    <xs:sequence>
+      <xs:element name="Employee" minOccurs="0" maxOccurs="unbounded" type="Employee" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- 
+  Employee 
+  -->
+  <xs:complexType name="Employee">
+    <xs:complexContent mixed="false">
+      <xs:extension base="DataContractBase">
+        <xs:sequence>
+          <xs:element name="EmployeeID" minOccurs="0" maxOccurs="1" type="uniqueIdentifier" />
+          <xs:element name="Name" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="FirstName" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="Lastname" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="ExternalLink" minOccurs="0" maxOccurs="1" type="Hyperlink" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>    
+  </xs:complexType>
+  
+</xs:schema>

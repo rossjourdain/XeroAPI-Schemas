@@ -80,6 +80,14 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="Hyperlink">
+    <xs:sequence>
+      <xs:element name="LinkID" minOccurs="0" maxOccurs="1" type="uniqueIdentifier" />
+      <xs:element name="Url" minOccurs="0" maxOccurs="1" type="xs:anyURI" />
+      <xs:element name="Description" minOccurs="0" maxOccurs="1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  
   <!--
   Enumerator Types  
   -->

@@ -66,6 +66,9 @@
     <None Include="CreditNote.xsd" />
     <None Include="Currency.xsd" />
     <None Include="CurrencyCode.xsd" />
+    <None Include="Employee.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Invoice.xsd" />
     <None Include="Items.xsd">
       <SubType>Designer</SubType>
