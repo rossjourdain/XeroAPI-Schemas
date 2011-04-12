@@ -7,7 +7,18 @@
   <xs:include schemaLocation="Account.xsd" />
   <xs:include schemaLocation="Invoice.xsd" />
 
-  <!-- Payment against an invoice -->
+  <!--
+  ArrayOfPayment
+  -->
+  <xs:complexType name="ArrayOfPayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Payment" nillable="true" type="Payment" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- 
+  Payment 
+  -->
   <xs:complexType name="Payment">
     <xs:complexContent mixed="false">
       <xs:extension base="DataContractBase">
@@ -18,15 +29,10 @@
           <xs:element minOccurs="0" maxOccurs="1" name="Account" type="Account" />
           <xs:element minOccurs="0" maxOccurs="1" name="Reference" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="Invoice" type="Invoice" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="currencyCode" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
-  </xs:complexType>
-
-  <xs:complexType name="ArrayOfPayment">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Payment" nillable="true" type="Payment" />
-    </xs:sequence>
   </xs:complexType>
   
 </xs:schema>
