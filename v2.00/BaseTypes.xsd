@@ -80,14 +80,6 @@
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="Hyperlink">
-    <xs:sequence>
-      <xs:element name="LinkID" minOccurs="0" maxOccurs="1" type="uniqueIdentifier" />
-      <xs:element name="Url" minOccurs="0" maxOccurs="1" type="xs:anyURI" />
-      <xs:element name="Description" minOccurs="0" maxOccurs="1" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  
   <!--
   Enumerator Types  
   -->
@@ -264,5 +256,29 @@
       <xs:enumeration value="DELETED"></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-  
+
+  <!-- trueOrFalse -->
+  <xs:simpleType name="trueOrFalse">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="true" />
+      <xs:enumeration value="false" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- dayNumber -->
+  <xs:simpleType name="dayNumber">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="1" />
+      <xs:maxInclusive value="31" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- monthNumber -->
+  <xs:simpleType name="monthNumber">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="1" />
+      <xs:maxInclusive value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+
 </xs:schema>

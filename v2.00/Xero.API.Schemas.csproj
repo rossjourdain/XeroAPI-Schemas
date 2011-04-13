@@ -63,6 +63,9 @@
     <None Include="BaseTypes.xsd" />
     <None Include="BrandingTheme.xsd" />
     <None Include="Contact.xsd" />
+    <None Include="CountryCode.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="CreditNote.xsd" />
     <None Include="Currency.xsd" />
     <None Include="CurrencyCode.xsd" />

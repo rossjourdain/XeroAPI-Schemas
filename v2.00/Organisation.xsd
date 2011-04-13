@@ -5,6 +5,7 @@
 >
   <xs:include schemaLocation="BaseTypes.xsd" />
   <xs:include schemaLocation="CurrencyCode.xsd" />
+  <xs:include schemaLocation="CountryCode.xsd" />
 
   <xs:element name="Organisations" nillable="true" type="ArrayOfOrganisation" />
 
@@ -19,23 +20,23 @@
       <xs:extension base="DataContractBase">
         <xs:sequence>
           <xs:element minOccurs="0" maxOccurs="1" name="APIKey" type="xs:string" />
-          <xs:element minOccurs="0" maxOccurs="1" name="Country" type="xs:string" />
-          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
-          <xs:element minOccurs="0" maxOccurs="1" name="LegalName" type="xs:string" />
-          <xs:element minOccurs="1" maxOccurs="1" name="PaysTax" type="xs:boolean" />
-          <xs:element minOccurs="0" maxOccurs="1" name="Version" type="xs:string" />
-          <xs:element minOccurs="0" maxOccurs="1" name="OrganisationType" type="xs:string" />
-          <xs:element minOccurs="0" maxOccurs="1" name="BaseCurrency" type="currencyCode" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="LegalName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PaysTax" type="xs:boolean" />
+          <xs:element minOccurs="1" maxOccurs="1" name="Version" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OrganisationType" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BaseCurrency" type="currencyCode" />
           
           <!-- Added for v2.06 -->
-          <xs:element minOccurs="0" maxOccurs="1" name="CountryCode" type="currencyCode" />
-          <xs:element minOccurs="0" maxOccurs="1" name="IsDemoCompany" type="currencyCode" />
-          <xs:element minOccurs="0" maxOccurs="1" name="OrganisationStatus" type="organisationStatusCode" />
+          <xs:element minOccurs="1" maxOccurs="1" name="CountryCode" type="isoCountryCode" />
+          <xs:element minOccurs="1" maxOccurs="1" name="IsDemoCompany" type="trueOrFalse" />
+          <xs:element minOccurs="1" maxOccurs="1" name="OrganisationStatus" type="organisationStatusCode" />
           
           <!-- Added for v2.08 -->
+          <xs:element minOccurs="0" maxOccurs="1" name="RegistrationNumber" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="TaxNumber" type="xs:string" />
-          <xs:element minOccurs="0" maxOccurs="1" name="FinancialYearEndDay" type="currencyCode" />
-          <xs:element minOccurs="0" maxOccurs="1" name="FinancialYearEndMonth" type="currencyCode" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FinancialYearEndDay" type="dayNumber" />
+          <xs:element minOccurs="0" maxOccurs="1" name="FinancialYearEndMonth" type="monthNumber" />
           <xs:element minOccurs="0" maxOccurs="1" name="PeriodLockDate" type="xs:date" />
           <xs:element minOccurs="0" maxOccurs="1" name="EndOfYearLockDate" type="xs:date" />
           
@@ -43,5 +44,5 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-   
+  
 </xs:schema>

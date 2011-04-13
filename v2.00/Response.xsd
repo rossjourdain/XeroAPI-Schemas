@@ -22,7 +22,6 @@
   <xs:include schemaLocation="Items.xsd" />
   <xs:include schemaLocation="ManualJournal.xsd" />
   <xs:include schemaLocation="Report.xsd" />
-  <xs:include schemaLocation="Employee.xsd" />
 
   <xs:element name="Response" type="ResponseType" />
   
@@ -50,7 +49,6 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Items" type="ArrayOfItem" />
       <xs:element minOccurs="0" maxOccurs="1" name="ManualJournals" type="ArrayOfManualJournal" />
       <xs:element minOccurs="0" maxOccurs="1" name="Reports" type="ArrayOfReport" />
-      <xs:element minOccurs="0" maxOccurs="1" name="Employees" type="ArrayOfEmployee" />
       
     </xs:sequence>
   </xs:complexType>
