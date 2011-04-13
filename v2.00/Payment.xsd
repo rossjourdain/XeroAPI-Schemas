@@ -18,6 +18,7 @@
           <xs:element minOccurs="0" maxOccurs="1" name="Account" type="Account" />
           <xs:element minOccurs="0" maxOccurs="1" name="Reference" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="Invoice" type="Invoice" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CurrencyRate" type="currencyRate" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

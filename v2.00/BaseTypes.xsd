@@ -80,6 +80,14 @@
     </xs:sequence>
   </xs:complexType>
 
+  <xs:complexType name="Hyperlink">
+    <xs:sequence>
+      <xs:element name="LinkID" minOccurs="0" maxOccurs="1" type="uniqueIdentifier" />
+      <xs:element name="Url" minOccurs="0" maxOccurs="1" type="xs:anyURI" />
+      <xs:element name="Description" minOccurs="0" maxOccurs="1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  
   <!--
   Enumerator Types  
   -->
@@ -278,6 +286,14 @@
     <xs:restriction base="xs:int">
       <xs:minInclusive value="1" />
       <xs:maxInclusive value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- employeeStatus -->
+  <xs:simpleType name="employeeStatus">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="ACTIVE" />
+      <xs:enumeration value="DELETED" />
     </xs:restriction>
   </xs:simpleType>
 

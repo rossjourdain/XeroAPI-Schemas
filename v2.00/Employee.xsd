@@ -25,6 +25,7 @@
       <xs:extension base="DataContractBase">
         <xs:sequence>
           <xs:element name="EmployeeID" minOccurs="0" maxOccurs="1" type="uniqueIdentifier" />
+          <xs:element name="Status" minOccurs="0" maxOccurs="1" type="employeeStatus" />
           <xs:element name="Name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="FirstName" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="Lastname" minOccurs="0" maxOccurs="1" type="xs:string" />
