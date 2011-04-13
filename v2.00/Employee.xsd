@@ -28,8 +28,9 @@
           <xs:element name="Status" minOccurs="0" maxOccurs="1" type="employeeStatus" />
           <xs:element name="Name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="FirstName" minOccurs="0" maxOccurs="1" type="xs:string" />
-          <xs:element name="Lastname" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="LastName" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="ExternalLink" minOccurs="0" maxOccurs="1" type="Hyperlink" />
+          <xs:element name="UpdatedDateUTC" minOccurs="0" maxOccurs="1" type="xs:dateTime" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>    
