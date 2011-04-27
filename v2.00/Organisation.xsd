@@ -37,8 +37,8 @@
           <xs:element minOccurs="0" maxOccurs="1" name="TaxNumber" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="FinancialYearEndDay" type="dayNumber" />
           <xs:element minOccurs="0" maxOccurs="1" name="FinancialYearEndMonth" type="monthNumber" />
-          <xs:element minOccurs="0" maxOccurs="1" name="PeriodLockDate" type="xs:date" />
-          <xs:element minOccurs="0" maxOccurs="1" name="EndOfYearLockDate" type="xs:date" />
+          <xs:element minOccurs="0" maxOccurs="1" name="PeriodLockDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="EndOfYearLockDate" type="xs:dateTime" />
           
         </xs:sequence>
       </xs:extension>

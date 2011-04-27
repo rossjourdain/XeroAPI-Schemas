@@ -54,6 +54,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="ValidationErrors" type="ArrayOfValidationError" />
       <xs:element minOccurs="0" maxOccurs="1" name="Warnings" type="ArrayOfWarning" />
     </xs:sequence>
+    <xs:attribute name="status" type="entityValidationStatus" use="optional" />
   </xs:complexType>
 
   <xs:complexType name="ArrayOfValidationError">
@@ -297,4 +298,13 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <!-- entityStatus -->
+  <xs:simpleType name="entityValidationStatus">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="OK" />
+      <xs:enumeration value="WARNING" />
+      <xs:enumeration value="ERROR" />      
+    </xs:restriction>
+  </xs:simpleType>
+  
 </xs:schema>
