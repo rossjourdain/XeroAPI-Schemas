@@ -39,6 +39,7 @@
           <xs:element minOccurs="0" maxOccurs="1" name="FinancialYearEndMonth" type="monthNumber" />
           <xs:element minOccurs="0" maxOccurs="1" name="PeriodLockDate" type="xs:dateTime" />
           <xs:element minOccurs="0" maxOccurs="1" name="EndOfYearLockDate" type="xs:dateTime" />
+		  <xs:element minOccurs="0" maxOccurs="1" name="CreatedDateUTC" type="xs:dateTime" />
           
         </xs:sequence>
       </xs:extension>
