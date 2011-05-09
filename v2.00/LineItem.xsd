@@ -6,6 +6,8 @@
   <xs:include schemaLocation="BaseTypes.xsd" />
   <xs:include schemaLocation="Tracking.xsd" />
 
+  <xs:element name="LineItems" type="ArrayOfLineItem" />
+  
   <xs:complexType name="ArrayOfLineItem">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="LineItem" nillable="true" type="LineItem" />
