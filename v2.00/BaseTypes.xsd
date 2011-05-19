@@ -116,8 +116,10 @@
   <xs:simpleType name="fixedTaxType">
     <xs:restriction base="xs:string">
       <xs:enumeration value="INPUT"><xs:annotation><xs:documentation>Input</xs:documentation></xs:annotation></xs:enumeration>
+      <xs:enumeration value="INPUT2"><xs:annotation><xs:documentation>Input2</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="NONE"><xs:annotation><xs:documentation>None</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="OUTPUT"><xs:annotation><xs:documentation>Output</xs:documentation></xs:annotation></xs:enumeration>
+      <xs:enumeration value="OUTPUT2"><xs:annotation><xs:documentation>Output2</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="ZERORATED"><xs:annotation><xs:documentation>Zero Rated</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="EXEMPTINPUT"><xs:annotation><xs:documentation>Exempt Input</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="EXEMPTOUTPUT"><xs:annotation><xs:documentation>Exempt Output</xs:documentation></xs:annotation></xs:enumeration>
