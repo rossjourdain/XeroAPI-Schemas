@@ -13,7 +13,7 @@
   <!-- Bank Transactions -->
   <xs:complexType name="ArrayOfBankTransaction">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="BankTransaction" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BankTransaction" nillable="true" type="BankTransaction" />
     </xs:sequence>
   </xs:complexType>
 

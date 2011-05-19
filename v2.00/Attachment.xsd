@@ -10,7 +10,7 @@
   <!-- Attachments -->
   <xs:complexType name="ArrayOfAttachment">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="Attachment" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Attachment" nillable="true" type="Attachment" />
     </xs:sequence>
   </xs:complexType>
   
@@ -21,7 +21,7 @@
         <xs:sequence>
           <xs:element minOccurs="1" maxOccurs="1" name="AttachmentID" type="uniqueIdentifier" />
           <xs:element minOccurs="1" maxOccurs="1" name="FileName" type="xs:string" />
-          <xs:element minOccurs="1" maxOccurs="1" name="MimeType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="MimeType" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="Content" type="xs:base64Binary" />
         </xs:sequence>
       </xs:extension>
