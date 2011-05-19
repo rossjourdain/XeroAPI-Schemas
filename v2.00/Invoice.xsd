@@ -50,6 +50,9 @@
 
           <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="ExternalLinkProviderName" type="xs:string" />
+          
+          <!-- This is never 'false', it's just not there. -->
+          <xs:element minOccurs="0" maxOccurs="1" name="SentToContact" type="xs:boolean" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
