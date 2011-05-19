@@ -24,6 +24,7 @@
   <xs:include schemaLocation="Report.xsd" />
   <xs:include schemaLocation="Employee.xsd" />
   <xs:include schemaLocation="Attachment.xsd" />
+  <xs:include schemaLocation="BankTransaction.xsd" />
 
   <xs:element name="Response" type="ResponseType" />
   
@@ -53,6 +54,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Reports" type="ArrayOfReport" />
       <xs:element minOccurs="0" maxOccurs="1" name="Employees" type="ArrayOfEmployee" />
       <xs:element minOccurs="0" maxOccurs="1" name="Attachments" type="ArrayOfAttachment" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BankTransactions" type="ArrayOfBankTransaction" />
       
     </xs:sequence>
   </xs:complexType>

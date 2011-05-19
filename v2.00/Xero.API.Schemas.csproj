@@ -63,6 +63,9 @@
     <None Include="Attachment.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="BankTransaction.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="BaseTypes.xsd" />
     <None Include="BrandingTheme.xsd" />
     <None Include="Contact.xsd" />

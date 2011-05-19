@@ -324,5 +324,21 @@
       <xs:enumeration value="ERROR" />      
     </xs:restriction>
   </xs:simpleType>
-  
+
+  <!-- Bank Transaction Status -->
+  <xs:simpleType name="bankTransactionStatus">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="AUTHORISED"/>
+      <xs:enumeration value="VOIDED"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Bank Transaction Type (Spend Money or Receive Money) -->
+  <xs:simpleType name="bankTransactionType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="SPEND"/>
+      <xs:enumeration value="RECEIVE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
 </xs:schema>
