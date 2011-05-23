@@ -33,7 +33,7 @@
           <xs:element minOccurs="1" maxOccurs="1" name="SubTotal" nillable="true" type="itemPrice" />
           <xs:element minOccurs="1" maxOccurs="1" name="TotalTax" nillable="true" type="itemPrice" />
           <xs:element minOccurs="1" maxOccurs="1" name="Total" nillable="true" type="itemPrice" />
-          <xs:element minOccurs="1" maxOccurs="1" name="UpdatedDateUTC" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" maxOccurs="1" name="UpdatedDateUTC" nillable="true" type="xs:dateTime" />
           <xs:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="currencyCode" />
           <xs:element minOccurs="0" maxOccurs="1" name="FullyPaidOnDate" nillable="true" type="xs:dateTime" />
 
