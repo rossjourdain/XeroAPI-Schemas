@@ -341,4 +341,12 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <!-- Tax Rate Status-->
+  <xs:simpleType name="taxRateStatus">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="ACTIVE" />
+      <xs:enumeration value="DELETED" />
+    </xs:restriction>
+  </xs:simpleType>
+
 </xs:schema>
