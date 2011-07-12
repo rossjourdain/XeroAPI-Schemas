@@ -348,5 +348,16 @@
       <xs:enumeration value="DELETED" />
     </xs:restriction>
   </xs:simpleType>
-
+  
+  <!-- Account Class -->
+  <xs:simpleType name="accountClass">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="EXPENSE" />
+      <xs:enumeration value="ASSET" />
+	  <xs:enumeration value="LIABILITY" />
+	  <xs:enumeration value="REVENUE" />
+	  <xs:enumeration value="EQUITY" />
+    </xs:restriction>  
+  </xs:simpleType>
+  
 </xs:schema>
