@@ -53,6 +53,8 @@
           
           <!-- This is never 'false', it's just not there. -->
           <xs:element minOccurs="0" maxOccurs="1" name="SentToContact" type="xs:boolean" />
+          
+          <xs:element minOccurs="0" maxOccurs="1" name="CurrencyRate" type="currencyRate" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

@@ -41,7 +41,8 @@
           
           <xs:element minOccurs="0" maxOccurs="1" name="SentToContact" type="trueOrFalse" />
           <xs:element minOccurs="0" maxOccurs="1" name="AppliedAmount" type="itemPrice" />
-          
+
+          <xs:element minOccurs="0" maxOccurs="1" name="CurrencyRate" type="currencyRate" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>

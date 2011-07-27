@@ -22,7 +22,6 @@
     <xs:complexContent mixed="false">
       <xs:extension base="DataContractBase">
         <xs:sequence>
-          
           <xs:element minOccurs="1" maxOccurs="1" name="Contact" type="Contact" />
           <xs:element minOccurs="1" maxOccurs="1" name="Date" type="xs:dateTime" />
           <xs:element minOccurs="1" maxOccurs="1" name="Status" type="bankTransactionStatus" />
@@ -38,6 +37,7 @@
           <xs:element minOccurs="1" maxOccurs="1" name="Type" type="bankTransactionType" />
           <xs:element minOccurs="0" maxOccurs="1" name="Reference" type="xs:string" />
           <xs:element minOccurs="1" maxOccurs="1" name="IsReconciled" type="trueOrFalse" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CurrencyRate" type="currencyRate" />
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
