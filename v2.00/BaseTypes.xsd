@@ -228,7 +228,7 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <!-- Invoice Types for 'Invoice' endpoint -->
+  <!-- Document types for 'Invoice' endpoint -->
   <xs:simpleType name="invoiceType">
     <xs:annotation>
       <xs:documentation>Invoice Type</xs:documentation>
@@ -239,6 +239,17 @@
     </xs:restriction>
   </xs:simpleType>
     
+  <!-- Document types for 'CreditNote' endpoint -->
+  <xs:simpleType name="creditNoteType">
+    <xs:annotation>
+      <xs:documentation>Invoice Type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="ACCPAYCREDIT"></xs:enumeration>
+      <xs:enumeration value="ACCRECCREDIT"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  
   <!-- Manual Journal Status Enumeration-->
   <xs:simpleType name="manualJournalStatus">
   	<xs:annotation>
