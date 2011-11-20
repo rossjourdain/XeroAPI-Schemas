@@ -267,8 +267,15 @@
   	<xs:restriction base="xs:token">
   		<xs:enumeration value="DRAFT"><xs:annotation><xs:documentation>Draft</xs:documentation></xs:annotation></xs:enumeration>
   		<xs:enumeration value="SUBMITTED"><xs:annotation><xs:documentation>Submitted</xs:documentation></xs:annotation></xs:enumeration>
-      <!-- TODO: there are probably more status to add -->
   	</xs:restriction>    
+  </xs:simpleType>
+  
+  <!-- Expense Claim Status-->
+  <xs:simpleType name="expenseClaimStatus">
+  	<xs:annotation><xs:documentation>Expense Claim Status</xs:documentation></xs:annotation>
+  	<xs:restriction base="xs:token">
+  		<xs:enumeration value="SUBMITTED"><xs:annotation><xs:documentation>Submitted</xs:documentation></xs:annotation></xs:enumeration>
+  	</xs:restriction> 
   </xs:simpleType>
   
   <!-- Currency Rate Usage -->

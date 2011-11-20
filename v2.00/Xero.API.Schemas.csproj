@@ -78,6 +78,9 @@
     <None Include="Employee.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ExpenseClaim.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Invoice.xsd" />
     <None Include="Items.xsd">
       <SubType>Designer</SubType>
