@@ -278,6 +278,7 @@
   	<xs:annotation><xs:documentation>Expense Claim Status</xs:documentation></xs:annotation>
   	<xs:restriction base="xs:token">
   		<xs:enumeration value="SUBMITTED"><xs:annotation><xs:documentation>Submitted</xs:documentation></xs:annotation></xs:enumeration>
+      <xs:enumeration value="AUTHORISED"></xs:enumeration>
       <xs:enumeration value="DELETED"></xs:enumeration>
       <xs:enumeration value="VOIDED"></xs:enumeration>
   	</xs:restriction> 
