@@ -21,6 +21,7 @@
         <xs:sequence>
           <xs:element minOccurs="1" maxOccurs="1" name="AttachmentID" type="uniqueIdentifier" />
           <xs:element minOccurs="1" maxOccurs="1" name="FileName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:anyURI" />
           <xs:element minOccurs="0" maxOccurs="1" name="MimeType" type="xs:string" />
           <xs:element minOccurs="0" maxOccurs="1" name="Content" type="xs:base64Binary" />
         </xs:sequence>
