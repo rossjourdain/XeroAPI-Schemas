@@ -48,7 +48,7 @@
           <xs:element minOccurs="0" maxOccurs="1" name="AmountPaid" type="itemPrice" />
           <xs:element minOccurs="0" maxOccurs="1" name="AmountCredited" type="itemPrice" />
 
-          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:anyURI" />
           <xs:element minOccurs="0" maxOccurs="1" name="ExternalLinkProviderName" type="xs:string" />
           
           <!-- This is never 'false', it's just not there. -->
