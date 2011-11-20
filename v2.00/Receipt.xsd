@@ -12,7 +12,7 @@
   <xs:element name="Receipts" type="ArrayOfReceipt" />
 
   <!-- 
-  ArrayOfUser
+  ArrayOfReceipt
   -->
   <xs:complexType name="ArrayOfReceipt">
     <xs:sequence>
@@ -21,7 +21,7 @@
   </xs:complexType>
 
   <!-- 
-  User 
+  Receipt 
   -->
   <xs:complexType name="Receipt">
     <xs:complexContent mixed="false">
