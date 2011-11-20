@@ -95,6 +95,9 @@
     <None Include="Response.xsd" />
     <None Include="TaxRate.xsd" />
     <None Include="Tracking.xsd" />
+    <None Include="User.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

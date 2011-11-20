@@ -23,8 +23,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="DataContractBase">
         <xs:sequence>
-          <xs:element name="UserID" minOccurs="0" maxOccurs="1" type="uniqueIdentifier" />
-          <xs:element name="EmailAddress" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="UserCID" minOccurs="0" maxOccurs="1" type="uniqueIdentifier" />
           <xs:element name="FirstName" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="LastName" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="UpdatedDateUTC" minOccurs="0" maxOccurs="1" type="xs:dateTime" />
