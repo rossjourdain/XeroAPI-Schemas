@@ -10,6 +10,13 @@
       <xs:element name="ErrorNumber" type="xs:integer" minOccurs="1" maxOccurs="1" />
       <xs:element name="Type" type="xs:string" minOccurs="1" maxOccurs="1" />
       <xs:element name="Message" type="xs:string" minOccurs="1" maxOccurs="1" />
+      <xs:element name="Elements" type="ArrayOfDataContractBase" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="ArrayOfDataContractBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataContractBase" type="DataContractBase" />
     </xs:sequence>
   </xs:complexType>
   
