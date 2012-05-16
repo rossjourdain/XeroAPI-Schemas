@@ -20,7 +20,7 @@
         <xs:sequence>
           <xs:element minOccurs="1" maxOccurs="1" name="AccountID" type="uniqueIdentifier" />
           <xs:element minOccurs="0" maxOccurs="1" name="Code" type="accountCode" />
-          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="accountName" />
           <xs:element minOccurs="0" maxOccurs="1" name="Status" type="accountStatus" />
           <xs:element minOccurs="0" maxOccurs="1" name="Type" type="accountType" />
           <xs:element minOccurs="0" maxOccurs="1" name="TaxType" type="taxType" />

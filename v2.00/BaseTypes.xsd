@@ -210,6 +210,17 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <!-- Account Name -->
+  <xs:simpleType name="accountName">
+    <xs:annotation>
+      <xs:documentation>Account Name</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="150" />
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>  
+  
   <!-- Account Code -->
   <xs:simpleType name="accountCode">
     <xs:annotation><xs:documentation>Account Code</xs:documentation></xs:annotation>
