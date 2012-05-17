@@ -196,6 +196,7 @@
       <xs:enumeration value="REALISEDCURRENCYGAIN"><xs:annotation><xs:documentation>Realised FX</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="UNREALISEDCURRENCYGAIN"><xs:annotation><xs:documentation>Unrealised FX</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="BANKCURRENCYGAIN"><xs:annotation><xs:documentation>Bank Revaluations</xs:documentation></xs:annotation></xs:enumeration>
+	  <xs:enumeration value="WAGEPAYABLES"><xs:annotation><xs:documentation>Wage Payables</xs:documentation></xs:annotation></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
 
