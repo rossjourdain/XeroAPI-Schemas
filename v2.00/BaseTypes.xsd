@@ -236,7 +236,7 @@
       <xs:documentation>Bank Account Number</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:token">
-      <xs:maxLength value="20" />
+      <xs:maxLength value="50" />
     </xs:restriction>
   </xs:simpleType>
 
