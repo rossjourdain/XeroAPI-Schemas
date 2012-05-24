@@ -4,13 +4,25 @@
   <xs:include schemaLocation="CurrencyCode.xsd"/>
   <xs:include schemaLocation="Address.xsd"/>
   <xs:include schemaLocation="Account.xsd"/>
+  <xs:include schemaLocation="TaxRate.xsd"/>
+  <xs:include schemaLocation="Organisation.xsd"/>
+  <xs:include schemaLocation="Items.xsd"/>
+  <xs:include schemaLocation="Contact.xsd"/>
+  <xs:include schemaLocation="Invoice.xsd"/>
 
   <xs:element name="Setup" nillable="true" type="SetupType"/>
 
+  <!--
+  Setup for conversions
+  -->  
   <xs:complexType name="SetupType">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Accounts" type="ArrayOfAccount"/>
-    </xs:sequence>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="Organisation" type="Organisation" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Accounts" type="ArrayOfAccount"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="TaxRates" type="ArrayOfTaxRate"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="Contacts" type="ArrayOfContact"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="Items" type="ArrayOfItem"/>
+    </xs:all>
   </xs:complexType>
 
 </xs:schema>
