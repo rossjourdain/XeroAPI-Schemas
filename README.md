@@ -3,7 +3,7 @@ Xero API XSD Schemas
 
 This repository contains a set of XSD schemas that can be used with the [Xero API](http://api.xero.com). Xero provide [online accounting software](http://www.xero.com/) for businesses. For more information on connecting to the API, see the [Xero Developer Centre](http://developer.xero.com/).
 
-*Please Note* These XSD schemas are provided as a guide for the XML that is read/written to the Xero API. They can be used to generate client-side object models for use with the Xero API, but we don't recommend that you use them to validate each request and response message to the API.
+**Please Note** These XSD schemas are provided as a guide for the XML that is read/written to the Xero API. They can be used to generate client-side object models for use with the Xero API, but we don't currently recommend that you use them to validate each xml request and response message to the API.
 
 
 Copyright
@@ -33,8 +33,8 @@ Copyright
  OTHER DEALINGS IN THE SOFTWARE.
 
 
- Warranty
- --------
+Warranty
+--------
  
  Xero API Schemas
 
