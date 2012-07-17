@@ -21,19 +21,20 @@
   Employee 
   -->
   <xs:complexType name="Employee">
-    <xs:complexContent mixed="false">
-      <xs:extension base="DataContractBase">
-        <xs:sequence>
-          <xs:element name="EmployeeID" minOccurs="0" maxOccurs="1" type="uniqueIdentifier" />
-          <xs:element name="Status" minOccurs="0" maxOccurs="1" type="employeeStatus" />
-          <xs:element name="Name" minOccurs="0" maxOccurs="1" type="xs:string" />
-          <xs:element name="FirstName" minOccurs="0" maxOccurs="1" type="xs:string" />
-          <xs:element name="LastName" minOccurs="0" maxOccurs="1" type="xs:string" />
-          <xs:element name="ExternalLink" minOccurs="0" maxOccurs="1" type="Hyperlink" />
-          <xs:element name="UpdatedDateUTC" minOccurs="0" maxOccurs="1" type="xs:dateTime" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>    
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="ValidationErrors" type="ArrayOfValidationError" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Warnings" type="ArrayOfWarning" />
+
+      <xs:element name="EmployeeID" minOccurs="0" maxOccurs="1" type="uniqueIdentifier" />
+      <xs:element name="Status" minOccurs="0" maxOccurs="1" type="employeeStatus" />
+      <xs:element name="Name" minOccurs="0" maxOccurs="1" type="xs:string" />
+      <xs:element name="FirstName" minOccurs="0" maxOccurs="1" type="xs:string" />
+      <xs:element name="LastName" minOccurs="0" maxOccurs="1" type="xs:string" />
+      <xs:element name="ExternalLink" minOccurs="0" maxOccurs="1" type="Hyperlink" />
+      <xs:element name="UpdatedDateUTC" minOccurs="0" maxOccurs="1" type="xs:dateTime" />
+      
+    </xs:all>
+    <xs:attribute name="status" type="entityValidationStatus" use="optional" />
   </xs:complexType>
   
 </xs:schema>

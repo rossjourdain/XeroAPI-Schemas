@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" id="Setup" elementFormDefault="qualified">
   <xs:include schemaLocation="BaseTypes.xsd"/>
   <xs:include schemaLocation="CurrencyCode.xsd"/>
@@ -14,7 +14,7 @@
 
   <!--
   Setup for conversions
-  -->  
+  -->
   <xs:complexType name="SetupType">
     <xs:all>
       <xs:element minOccurs="0" maxOccurs="1" name="Organisation" type="Organisation" />

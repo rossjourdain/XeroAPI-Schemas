@@ -22,19 +22,20 @@
   ExpenseClaim 
   -->
   <xs:complexType name="ExpenseClaim">
-    <xs:complexContent mixed="false">
-      <xs:extension base="DataContractBase">
-        <xs:sequence>
-          <xs:element name="ExpenseClaimID" minOccurs="0" maxOccurs="1" type="uniqueIdentifier" />
-          <xs:element name="Status" minOccurs="0" maxOccurs="1" type="expenseClaimStatus" />
-          <xs:element name="Date" minOccurs="0" maxOccurs="1" type="xs:dateTime" />
-          <xs:element name="UpdatedDateUTC" minOccurs="0" maxOccurs="1" type="xs:dateTime" />
-          <xs:element name="User" minOccurs="0" maxOccurs="1" type="User" />
-          <xs:element name="Receipts" minOccurs="0" maxOccurs="1" type="ArrayOfReceipt" />
-          <xs:element name="Total" minOccurs="0" maxOccurs="1" type="itemPrice" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="ValidationErrors" type="ArrayOfValidationError" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Warnings" type="ArrayOfWarning" />
+
+      <xs:element name="ExpenseClaimID" minOccurs="0" maxOccurs="1" type="uniqueIdentifier" />
+      <xs:element name="Status" minOccurs="0" maxOccurs="1" type="expenseClaimStatus" />
+      <xs:element name="Date" minOccurs="0" maxOccurs="1" type="xs:dateTime" />
+      <xs:element name="UpdatedDateUTC" minOccurs="0" maxOccurs="1" type="xs:dateTime" />
+      <xs:element name="User" minOccurs="0" maxOccurs="1" type="User" />
+      <xs:element name="Receipts" minOccurs="0" maxOccurs="1" type="ArrayOfReceipt" />
+      <xs:element name="Total" minOccurs="0" maxOccurs="1" type="itemPrice" />
+
+    </xs:all>
+    <xs:attribute name="status" type="entityValidationStatus" use="optional" />
   </xs:complexType>
   
 </xs:schema>

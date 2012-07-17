@@ -16,16 +16,17 @@
 
   <!-- Branding Theme -->
   <xs:complexType name="BrandingTheme">
-    <xs:complexContent mixed="false">
-      <xs:extension base="DataContractBase">
-        <xs:sequence>
-          <xs:element minOccurs="1" maxOccurs="1" name="BrandingThemeID" type="uniqueIdentifier" />
-          <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:string" />
-          <xs:element minOccurs="1" maxOccurs="1" name="SortOrder" type="xs:integer" />
-          <xs:element minOccurs="1" maxOccurs="1" name="CreatedDateUTC" type="xs:dateTime" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="ValidationErrors" type="ArrayOfValidationError" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Warnings" type="ArrayOfWarning" />
+
+      <xs:element minOccurs="1" maxOccurs="1" name="BrandingThemeID" type="uniqueIdentifier" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="SortOrder" type="xs:integer" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CreatedDateUTC" type="xs:dateTime" />
+
+    </xs:all>
+    <xs:attribute name="status" type="entityValidationStatus" use="optional" />
   </xs:complexType>
   
 </xs:schema>
