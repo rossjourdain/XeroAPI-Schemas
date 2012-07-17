@@ -7,6 +7,12 @@
   <!--
   Simple Types
   -->
+
+  <xs:simpleType name="nonUnicodeString">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="^[\x20-\x7E]+$" />
+    </xs:restriction>
+  </xs:simpleType>
   
   <!-- uniqueIdentifier -->
   <xs:simpleType name="uniqueIdentifier">
@@ -14,7 +20,7 @@
       <xs:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
     </xs:restriction>
   </xs:simpleType>
-
+  
   <!-- quantity to 4dp -->
   <xs:simpleType name="itemQuantity">
     <xs:restriction base="xs:decimal">
@@ -46,17 +52,34 @@
     </xs:restriction>
   </xs:simpleType>
   
+  <!-- Organisation Details -->
+  
+  <xs:simpleType name="taxNumberType">
+    <xs:restriction base="nonUnicodeString">
+      <xs:minLength value="1" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="taxNumberDisplayNameType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="companyRegistrationNumberType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="255" />
+    </xs:restriction>
+  </xs:simpleType>
+    
+  
   <!--
   Complex types
   -->
-  <xs:complexType name="DataContractBase" abstract="true">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="1" name="ValidationErrors" type="ArrayOfValidationError" />
-      <xs:element minOccurs="0" maxOccurs="1" name="Warnings" type="ArrayOfWarning" />
-    </xs:sequence>
-    <xs:attribute name="status" type="entityValidationStatus" use="optional" />
-  </xs:complexType>
-
+  
   <xs:complexType name="ArrayOfValidationError">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidationError" type="ValidationError" />
@@ -92,7 +115,7 @@
   <!--
   Enumerator Types  
   -->
-  
+
   <!-- Line Amount Type -->
   <xs:simpleType name="lineAmountType">
     <xs:list>
@@ -196,7 +219,7 @@
       <xs:enumeration value="REALISEDCURRENCYGAIN"><xs:annotation><xs:documentation>Realised FX</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="UNREALISEDCURRENCYGAIN"><xs:annotation><xs:documentation>Unrealised FX</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="BANKCURRENCYGAIN"><xs:annotation><xs:documentation>Bank Revaluations</xs:documentation></xs:annotation></xs:enumeration>
-	  <xs:enumeration value="WAGEPAYABLES"><xs:annotation><xs:documentation>Wage Payables</xs:documentation></xs:annotation></xs:enumeration>
+      <xs:enumeration value="WAGEPAYABLES"><xs:annotation><xs:documentation>Wage Payables</xs:documentation></xs:annotation></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
 
@@ -220,13 +243,16 @@
       <xs:maxLength value="150" />
       <xs:minLength value="1" />
     </xs:restriction>
-  </xs:simpleType>  
+  </xs:simpleType>
   
   <!-- Account Code -->
   <xs:simpleType name="accountCode">
-    <xs:annotation><xs:documentation>Account Code</xs:documentation></xs:annotation>
+    <xs:annotation>
+      <xs:documentation>Account Code</xs:documentation>
+    </xs:annotation>
     <xs:restriction base="xs:token">
       <xs:maxLength value="10" />
+      <xs:minLength value="1" />
     </xs:restriction>
   </xs:simpleType>
   
@@ -277,8 +303,8 @@
   <xs:simpleType name="receiptStatus">
   	<xs:annotation><xs:documentation>Receipt Status</xs:documentation></xs:annotation>
   	<xs:restriction base="xs:token">
-  		<xs:enumeration value="DRAFT"></xs:enumeration>
-  		<xs:enumeration value="SUBMITTED"></xs:enumeration>
+  		<xs:enumeration value="DRAFT"><xs:annotation><xs:documentation>Draft</xs:documentation></xs:annotation></xs:enumeration>
+  		<xs:enumeration value="SUBMITTED"><xs:annotation><xs:documentation>Submitted</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="AUTHORISED"></xs:enumeration>
       <xs:enumeration value="VOIDED"></xs:enumeration>
       <xs:enumeration value="DELETED"></xs:enumeration>
@@ -313,6 +339,21 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <!-- Organisation Entity Type -->
+  <xs:simpleType name="organisationEntityType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="PERSONAL"></xs:enumeration>
+      <xs:enumeration value="CHARITY"></xs:enumeration>
+      <xs:enumeration value="COMPANY"></xs:enumeration>
+      <xs:enumeration value="PARTNERSHIP"></xs:enumeration>
+      <xs:enumeration value="PERSON"></xs:enumeration>
+      <xs:enumeration value="SOLETRADER"></xs:enumeration>
+      <xs:enumeration value="TRUST"></xs:enumeration>
+      <xs:enumeration value="CLUBSOCIETY"></xs:enumeration>
+      <xs:enumeration value="PRACTICE"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  
   <!-- trueOrFalse -->
   <xs:simpleType name="trueOrFalse">
     <xs:restriction base="xs:token">
