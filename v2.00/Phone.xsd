@@ -42,7 +42,7 @@
 
   <xs:simpleType name="phoneAreaCodeType">
     <xs:restriction base="nonUnicodeString">
-      <xs:maxLength value="20" />
+      <xs:maxLength value="10" />
     </xs:restriction>
   </xs:simpleType>
 
