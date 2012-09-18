@@ -32,11 +32,23 @@
       <xs:element minOccurs="0" maxOccurs="1" name="ShowInExpenseClaims" type="xs:boolean" />
       <xs:element minOccurs="0" maxOccurs="1" name="BankAccountNumber" type="bankAccountNumber" />
       <xs:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="currencyCode" />
-      <xs:element minOccurs="0" maxOccurs="1" name="ReportingCode" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="ReportingCodeName" type="xs:string" />
-      
+      <xs:element minOccurs="0" maxOccurs="1" name="ReportingCode" type="reportCode" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ReportingCodeName" type="reportCodeName" />
     </xs:all>
     <xs:attribute name="status" type="entityValidationStatus" use="optional" />
   </xs:complexType>
 
+  <xs:simpleType name="reportCode">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="reportCodeName">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  
 </xs:schema>
