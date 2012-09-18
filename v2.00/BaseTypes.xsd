@@ -266,6 +266,46 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <!-- Contact Name -->
+  <xs:simpleType name="contactName">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="500" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Contact First Name -->
+  <xs:simpleType name="contactFirstName">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="255" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Contact Last Name -->
+  <xs:simpleType name="contactLastName">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="255" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Email Address -->
+  <xs:simpleType name="emailAddress">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="500" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Skype User Name -->
+  <xs:simpleType name="skypeUserName">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="255" />
+    </xs:restriction>
+  </xs:simpleType>
+  
   <!-- Document types for 'Invoice' endpoint -->
   <xs:simpleType name="invoiceType">
     <xs:annotation>
@@ -342,15 +382,18 @@
   <!-- Organisation Entity Type -->
   <xs:simpleType name="organisationEntityType">
     <xs:restriction base="xs:token">
-      <xs:enumeration value="PERSONAL"></xs:enumeration>
       <xs:enumeration value="CHARITY"></xs:enumeration>
+      <xs:enumeration value="CLUBSOCIETY"></xs:enumeration>
       <xs:enumeration value="COMPANY"></xs:enumeration>
+      <xs:enumeration value="LTCOMPANY"></xs:enumeration>
+      <xs:enumeration value="NOTFORPROFIT"></xs:enumeration>
       <xs:enumeration value="PARTNERSHIP"></xs:enumeration>
       <xs:enumeration value="PERSON"></xs:enumeration>
+      <xs:enumeration value="SCORPORATION"></xs:enumeration>
+      <xs:enumeration value="SMSUPERFUND"></xs:enumeration>
       <xs:enumeration value="SOLETRADER"></xs:enumeration>
+      <xs:enumeration value="SUPERFUND"></xs:enumeration>
       <xs:enumeration value="TRUST"></xs:enumeration>
-      <xs:enumeration value="CLUBSOCIETY"></xs:enumeration>
-      <xs:enumeration value="PRACTICE"></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
   

@@ -6,6 +6,7 @@
   <xs:include schemaLocation="BaseTypes.xsd" />
   <xs:include schemaLocation="Address.xsd" />
   <xs:include schemaLocation="Phone.xsd" />
+  <xs:include schemaLocation="CurrencyCode.xsd" />
     
   <xs:element name="Contacts" nillable="true" type="ArrayOfContact" />
   
@@ -20,29 +21,35 @@
       <xs:element minOccurs="0" maxOccurs="1" name="ValidationErrors" type="ArrayOfValidationError" />
       <xs:element minOccurs="0" maxOccurs="1" name="Warnings" type="ArrayOfWarning" />
 
-      <xs:element minOccurs="1" maxOccurs="1" name="ContactID" type="uniqueIdentifier" />
-      <xs:element minOccurs="0" maxOccurs="1" name="ContactNumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ContactID" type="uniqueIdentifier" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ContactNumber" type="contactNumber" />
       <xs:element minOccurs="0" maxOccurs="1" name="ContactStatus" type="xs:string" />
-      <xs:element minOccurs="1" maxOccurs="1" name="Name" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="FirstName" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="LastName" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="SkypeUserName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="contactName" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FirstName" type="contactFirstName" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LastName" type="contactLastName" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="emailAddress" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SkypeUserName" type="skypeUserName" />
       <xs:element minOccurs="0" maxOccurs="1" name="BankAccountDetails" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="TaxNumber" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="AccountsReceivableTaxType" type="xs:string" />
-      <xs:element minOccurs="0" maxOccurs="1" name="AccountsPayableTaxType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TaxNumber" type="taxNumberType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AccountsReceivableTaxType" type="taxType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="AccountsPayableTaxType" type="taxType" />
       <xs:element minOccurs="0" maxOccurs="1" name="Addresses" type="ArrayOfAddress" />
       <xs:element minOccurs="0" maxOccurs="1" name="Phones" type="ArrayOfPhone" />
       <xs:element minOccurs="0" maxOccurs="1" name="UpdatedDateUTC" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" maxOccurs="1" name="ContactGroups" type="ArrayOfContactGroup" />
       <xs:element minOccurs="0" maxOccurs="1" name="IsSupplier" nillable="false" type="xs:boolean" />
       <xs:element minOccurs="0" maxOccurs="1" name="IsCustomer" nillable="false" type="xs:boolean" />
-      <xs:element minOccurs="0" maxOccurs="1" name="DefaultCurrency" type="xs:string" />
-      
+      <xs:element minOccurs="0" maxOccurs="1" name="DefaultCurrency" type="currencyCode" />
     </xs:all>
     <xs:attribute name="status" type="entityValidationStatus" use="optional" />
   </xs:complexType>
+
+  <xs:simpleType name="contactNumber">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
   
   <xs:complexType name="ArrayOfContactGroup">
     <xs:sequence>
