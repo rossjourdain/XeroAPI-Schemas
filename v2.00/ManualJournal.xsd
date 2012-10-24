@@ -28,7 +28,9 @@
       <xs:element minOccurs="0" maxOccurs="1" name="ManualJournalID" type="uniqueIdentifier" />
       <xs:element minOccurs="0" maxOccurs="1" name="Narration" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="JournalLines" type="ArrayOfManualJournalLine" />
-
+      <xs:element minOccurs="0" maxOccurs="1" name="Url" type="xs:anyURI" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ExternalLinkProviderName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ShowOnCashBasisReports" type="xs:boolean" />
     </xs:all>
     <xs:attribute name="status" type="entityValidationStatus" use="optional" />
   </xs:complexType>

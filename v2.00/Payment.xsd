@@ -20,7 +20,10 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Reference" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="Invoice" type="Invoice" />
       <xs:element minOccurs="0" maxOccurs="1" name="CurrencyRate" type="currencyRate" />
-
+      <xs:element minOccurs="0" maxOccurs="1" name="PaymentType" type="paymentType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Status" type="invoiceStatus" />
+      <xs:element minOccurs="0" maxOccurs="1" name="UpdatedDateUTC" nillable="true" type="xs:dateTime" />
+      
     </xs:all>
     <xs:attribute name="status" type="entityValidationStatus" use="optional" />
   </xs:complexType>

@@ -19,12 +19,13 @@
     <xs:all>
       <xs:element minOccurs="0" maxOccurs="1" name="ValidationErrors" type="ArrayOfValidationError" />
       <xs:element minOccurs="0" maxOccurs="1" name="Warnings" type="ArrayOfWarning" />
-
+      
+      <xs:element minOccurs="0" maxOccurs="1" name="Reference" type="xs:string" />
       <xs:element minOccurs="1" maxOccurs="1" name="JournalID" type="uniqueIdentifier" />
       <xs:element minOccurs="1" maxOccurs="1" name="JournalDate" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="1" maxOccurs="1" name="JournalNumber" type="xs:string" />
       <xs:element minOccurs="1" maxOccurs="1" name="CreatedDateUTC" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="1" maxOccurs="1" name="Reference" type="xs:string" />
+      
       <xs:element minOccurs="1" maxOccurs="1" name="JournalLines" type="ArrayOfJournalLine" />
 
     </xs:all>
@@ -49,10 +50,11 @@
       <xs:element minOccurs="1" maxOccurs="1" name="AccountCode" type="accountCode" />
       <xs:element minOccurs="1" maxOccurs="1" name="AccountType" type="accountType" />
       <xs:element minOccurs="1" maxOccurs="1" name="AccountName" type="xs:string" />
-      <xs:element minOccurs="1" maxOccurs="1" name="Description" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Description" type="xs:string" />
       <xs:element minOccurs="1" maxOccurs="1" name="NetAmount" type="itemPrice" />
       <xs:element minOccurs="1" maxOccurs="1" name="GrossAmount" type="itemPrice" />
       <xs:element minOccurs="0" maxOccurs="1" name="TaxAmount" type="itemPrice" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TrackingCategories" type="ArrayOfTrackingCategory" />
       <xs:element minOccurs="0" maxOccurs="1" name="TaxType" type="taxType" />
       <xs:element minOccurs="0" maxOccurs="1" name="TaxName" type="xs:string" />
 

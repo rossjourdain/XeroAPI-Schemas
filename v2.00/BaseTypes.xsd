@@ -10,7 +10,7 @@
 
   <xs:simpleType name="nonUnicodeString">
     <xs:restriction base="xs:string">
-      <xs:pattern value="^[\x20-\x7E]+$" />
+     <!-- <xs:pattern value="[0-9a-zA-Z-_]+" /> -->
     </xs:restriction>
   </xs:simpleType>
   
@@ -327,6 +327,18 @@
       <xs:enumeration value="ACCRECCREDIT"></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
+
+ <!-- Document types for 'Payments' endpoint -->
+  <xs:simpleType name="paymentType">
+    <xs:annotation>
+      <xs:documentation>Payment Type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="ACCPAYPAYMENT"></xs:enumeration>
+      <xs:enumeration value="ACCRECPAYMENT"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
   
   <!-- Manual Journal Status Enumeration-->
   <xs:simpleType name="manualJournalStatus">

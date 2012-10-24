@@ -10,7 +10,7 @@
   <!-- Branding Themes -->
   <xs:complexType name="ArrayOfBrandingTheme">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="BrandingTheme" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BrandingTheme" nillable="true" type="BrandingTheme" />
     </xs:sequence>
   </xs:complexType>
 

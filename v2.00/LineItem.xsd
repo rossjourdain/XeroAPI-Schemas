@@ -28,6 +28,7 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Tracking" type="ArrayOfTrackingCategory" />
       <xs:element minOccurs="0" maxOccurs="1" name="ItemCode" type="xs:string" />
       <xs:element minOccurs="1" maxOccurs="1" name="Quantity" nillable="true" type="itemQuantity" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DiscountRate" type="itemPrice" />
 
     </xs:all>
     <xs:attribute name="status" type="entityValidationStatus" use="optional" />    

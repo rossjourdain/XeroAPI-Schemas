@@ -25,21 +25,22 @@
       <xs:element minOccurs="0" maxOccurs="1" name="Warnings" type="ArrayOfWarning" />
 
       <xs:element minOccurs="0" maxOccurs="1" name="Contact" type="Contact" />
-      <xs:element minOccurs="1" maxOccurs="1" name="Date" nillable="true" type="xs:dateTime" />
-      <xs:element minOccurs="1" maxOccurs="1" name="DueDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DueDate" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" maxOccurs="1" name="BrandingThemeID" type="uniqueIdentifier" />
       <xs:element minOccurs="0" maxOccurs="1" name="Status" type="invoiceStatus" />
-      <xs:element minOccurs="1" maxOccurs="1" name="LineAmountTypes" nillable="true" type="lineAmountType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LineAmountTypes" nillable="true" type="lineAmountType" />
       <xs:element minOccurs="0" maxOccurs="1" name="LineItems" type="ArrayOfLineItem" />
-      <xs:element minOccurs="1" maxOccurs="1" name="SubTotal" nillable="true" type="itemPrice" />
-      <xs:element minOccurs="1" maxOccurs="1" name="TotalTax" nillable="true" type="itemPrice" />
-      <xs:element minOccurs="1" maxOccurs="1" name="Total" nillable="true" type="itemPrice" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DiscountRate" type="itemPrice" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SubTotal" nillable="true" type="itemPrice" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TotalTax" nillable="true" type="itemPrice" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Total" nillable="true" type="itemPrice" />
       <xs:element minOccurs="0" maxOccurs="1" name="UpdatedDateUTC" nillable="true" type="xs:dateTime" />
       <xs:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="currencyCode" />
       <xs:element minOccurs="0" maxOccurs="1" name="FullyPaidOnDate" nillable="true" type="xs:dateTime" />
 
-      <xs:element minOccurs="1" maxOccurs="1" name="Type" type="invoiceType" />
-      <xs:element minOccurs="1" maxOccurs="1" name="InvoiceID" type="uniqueIdentifier" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Type" type="invoiceType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="InvoiceID" type="uniqueIdentifier" />
       <xs:element minOccurs="0" maxOccurs="1" name="InvoiceNumber" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="Reference" type="xs:string" />
       <xs:element minOccurs="0" maxOccurs="1" name="Payments" type="ArrayOfPayment" />
@@ -56,6 +57,8 @@
       <xs:element minOccurs="0" maxOccurs="1" name="SentToContact" type="xs:boolean" />
 
       <xs:element minOccurs="0" maxOccurs="1" name="CurrencyRate" type="currencyRate" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TotalDiscount" nillable="true" type="itemPrice" />
+      <xs:element minOccurs="0" maxOccurs="1" name="HasAttachments" type="xs:boolean" />
 
     </xs:all>
     <xs:attribute name="status" type="entityValidationStatus" use="optional" />
