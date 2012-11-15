@@ -14,22 +14,23 @@
   </xs:complexType>
   
   <xs:complexType name="TaxRate">
-    <xs:complexContent mixed="false">
-      <xs:extension base="DataContractBase">
-        <xs:sequence>
-          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
-          <xs:element minOccurs="0" maxOccurs="1" name="TaxType" type="taxType" />
-          <xs:element minOccurs="1" maxOccurs="1" name="CanApplyToAssets" type="xs:boolean" />
-          <xs:element minOccurs="1" maxOccurs="1" name="CanApplyToEquity" type="xs:boolean" />
-          <xs:element minOccurs="1" maxOccurs="1" name="CanApplyToExpenses" type="xs:boolean" />
-          <xs:element minOccurs="1" maxOccurs="1" name="CanApplyToLiabilities" type="xs:boolean" />
-          <xs:element minOccurs="1" maxOccurs="1" name="CanApplyToRevenue" type="xs:boolean" />
-          <xs:element minOccurs="1" maxOccurs="1" name="DisplayTaxRate" nillable="true" type="taxRate" />
-          <xs:element minOccurs="1" maxOccurs="1" name="EffectiveRate" nillable="true" type="taxRate" />
-          <xs:element minOccurs="0" maxOccurs="1" name="Status" type="taxRateStatus" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
+    <xs:all>
+      <xs:element minOccurs="0" maxOccurs="1" name="ValidationErrors" type="ArrayOfValidationError" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Warnings" type="ArrayOfWarning" />
+
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TaxType" type="taxType" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CanApplyToAssets" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CanApplyToEquity" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CanApplyToExpenses" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CanApplyToLiabilities" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="CanApplyToRevenue" type="xs:boolean" />
+      <xs:element minOccurs="1" maxOccurs="1" name="DisplayTaxRate" nillable="true" type="taxRate" />
+      <xs:element minOccurs="1" maxOccurs="1" name="EffectiveRate" nillable="true" type="taxRate" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Status" type="taxRateStatus" />
+    
+    </xs:all>
+    <xs:attribute name="status" type="entityValidationStatus" use="optional" />
   </xs:complexType>
 
 </xs:schema>

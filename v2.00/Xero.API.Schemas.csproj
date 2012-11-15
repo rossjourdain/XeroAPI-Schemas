@@ -99,6 +99,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Response.xsd" />
+    <None Include="Setup.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="TaxRate.xsd" />
     <None Include="Tracking.xsd" />
     <None Include="User.xsd">

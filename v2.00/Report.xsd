@@ -15,12 +15,12 @@
   <!-- Report -->
   <xs:complexType name="Report">
     <xs:sequence>
-      <xs:element name="ReportID" minOccurs="1" maxOccurs="1" type="uniqueIdentifier" />
+      <xs:element name="ReportID" minOccurs="1" maxOccurs="1" type="xs:string" />
       <xs:element name="ReportName" minOccurs="1" maxOccurs="1" type="xs:string" />
       <xs:element name="ReportType" minOccurs="1" maxOccurs="1" type="xs:string" />
-      <xs:element name="ReportTitles" minOccurs="1" maxOccurs="1" type="ReportTitles" />
+      <xs:element name="ReportTitles" minOccurs="0" maxOccurs="1" type="ReportTitles" />
       <xs:element name="ReportDate" minOccurs="1" maxOccurs="1" type="xs:string" />
-      <xs:element name="UpdatedDateUTC" minOccurs="1" maxOccurs="1" type="xs:date" />
+      <xs:element minOccurs="1" maxOccurs="1" name="UpdatedDateUTC" type="xs:dateTime" />
       <xs:element name="Rows" minOccurs="0" maxOccurs="1" type="ReportRows" />
       <xs:element name="Attributes" minOccurs="0" maxOccurs="1" type="ReportAttributes" />
       <xs:element name="Fields" minOccurs="0" maxOccurs="1" type="ReportFields" />      
@@ -79,6 +79,7 @@
   <xs:complexType name="ReportRow">
     <xs:sequence>
       <xs:element name="RowType" minOccurs="1" maxOccurs="1" type="ReportRowType" />
+      <xs:element name="Title" minOccurs="0" maxOccurs="1" type="xs:string" />
       <xs:element name="Header" minOccurs="0" maxOccurs="1" type="xs:string" />
       <xs:element name="Rows" minOccurs="0" maxOccurs="1" type="ReportRows" />
       <xs:element name="Cells" minOccurs="0" maxOccurs="1" type="ReportCells" />
@@ -90,6 +91,7 @@
 	    <xs:enumeration value="Header"><xs:annotation><xs:documentation>Report Header Row</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="Section"><xs:annotation><xs:documentation>Report Section Row</xs:documentation></xs:annotation></xs:enumeration>
       <xs:enumeration value="Row"><xs:annotation><xs:documentation>Report Data Row</xs:documentation></xs:annotation></xs:enumeration>
+      <xs:enumeration value="SummaryRow"><xs:annotation><xs:documentation>Summary Data Row</xs:documentation></xs:annotation></xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
 
@@ -104,7 +106,7 @@
 
   <xs:complexType name="ReportCell">
     <xs:sequence>
-      <xs:element name="Value" minOccurs="1" maxOccurs="1" type="xs:string" />
+      <xs:element name="Value" minOccurs="0" maxOccurs="1" type="xs:string" />
       <xs:element name="Attributes" minOccurs="0" maxOccurs="1" type="ReportCellAttributes" />
     </xs:sequence>
   </xs:complexType>
@@ -113,7 +115,7 @@
   <!-- ReportCellAttributes -->
   <xs:complexType name="ReportCellAttributes">
     <xs:sequence>
-      <xs:element name="ReportCellAttribute" minOccurs="0" maxOccurs="unbounded" type="ReportCellAttribute" />
+      <xs:element name="Attribute" minOccurs="0" maxOccurs="unbounded" type="ReportCellAttribute" />
     </xs:sequence>
   </xs:complexType>
 
